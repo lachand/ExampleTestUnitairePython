@@ -27,14 +27,6 @@ jobs:
 
     - name: Run tests and generate HTML report
       run: |
-        pytest test_calculatrice.py --html=pytest_report.html --self-contained-html
+        pytest test_calculatrice.py
       env:
         CI: true
-
-    - name: Upload coverage and test reports
-      uses: actions/upload-artifact@v2
-      with:
-        name: test-reports
-        path: |
-          coverage_html/
-          pytest_report.html
