@@ -27,7 +27,7 @@ jobs:
 
     - name: Run tests and generate HTML report
       run: |
-        pytest test-calculatrice.py --cov-report html:coverage_html --html=pytest_report.html
+        pytest test-calculatrice.py html:coverage_html --html=pytest_report.html
       env:
         CI: true
 
